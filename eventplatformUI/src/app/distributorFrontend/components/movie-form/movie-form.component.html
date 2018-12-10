@@ -1,0 +1,113 @@
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<h3>Enter Movie Details</h3>
+
+<form (ngSubmit)="onSubmit()" #movieForm="ngForm" id="movieForm">
+
+  <div id="primary">
+
+  <div class="form-group">
+    <label for="title"><h5>Movie Title</h5></label>
+    <input [(ngModel)]="movie.movieTitle" type="text" class="form-control" id="title" name="title" required #title="ngModel">
+  </div>
+  <div [hidden]="title.valid || title.pristine"
+  class="alert alert-danger">Name not valid
+ </div>
+
+ <div class="form-group">
+  <label for="year"><h5>Year of Release</h5></label>
+  <input [(ngModel)]="movie.yearOfRelease" type="text" class="form-control" id="year" name="year" required #year="ngModel">
+</div>
+<div [hidden]="year.valid || year.pristine"
+class="alert alert-danger">Year not valid
+</div>
+
+<div class="form-group">
+  <label for="poster"><h5>Poster URL</h5></label>
+  <input [(ngModel)]="movie.posterUrl" type="text" class="form-control" id="poster" name="poster" required #poster="ngModel">
+</div>
+<div [hidden]="poster.valid || poster.pristine"
+class="alert alert-danger">URL not valid
+</div>
+
+<div class="form-group">
+  <label for="language"><h5>Language</h5></label>
+  <select [(ngModel)]="movie.language" type="text" class="form-control" id="language" name="language" required #language="ngModel">
+     <option *ngFor="let  language of languages">{{language}}</option>
+</select>
+</div>
+<div [hidden]="language.valid || language.pristine"
+class="alert alert-danger">Language not valid
+</div>
+
+</div>
+
+<div id="secondary">
+    <h5>Certificate</h5>
+  
+    <div id="certificateBox">
+
+<div class="form-check">
+  <input [(ngModel)]="movie.certificate" type="radio" class="form-check-input" id="certificateU" name="certificate"  #certificate="ngModel" value="U">
+  <label class="form-check-label" for="certificateU">
+    U
+  </label>
+</div>
+
+<div class="form-check">
+  <input [(ngModel)]="movie.certificate" type="radio" class="form-check-input" id="certificateA" name="certificate"  #certificate="ngModel" value="A">
+  <label class="form-check-label" for="certificateA">
+    A
+  </label>
+</div>
+
+<div class="form-check">
+  <input [(ngModel)]="movie.certificate" type="radio" class="form-check-input" id="certificateUA" name="certificate"  #certificate="ngModel" value="U/A">
+  <label class="form-check-label" for="certificateUA">
+    U/A
+  </label>
+</div>
+
+<div class="form-check">
+  <input [(ngModel)]="movie.certificate" type="radio" class="form-check-input" id="certificateS" name="certificate"  #certificate="ngModel" value="S">
+  <label class="form-check-label" for="certificateS">
+    S
+  </label>
+</div>
+
+</div>
+
+
+
+
+<h5>Genre</h5>
+<div id="genreBox">
+    
+<div class="form-check" class="genre">
+  <input [(ngModel)]="genreMap.action" type="checkbox" class="form-check-input" id="action" name="action"  #action="ngModel">Action
+</div>
+<div class="form-check" class="genre">
+  <input [(ngModel)]="genreMap.comedy" type="checkbox" class="form-check-input" id="comedy" name="comedy"  #comedy="ngModel">Comedy
+</div>
+<div class="form-check" class="genre">
+  <input [(ngModel)]="genreMap.fantasy" type="checkbox" class="form-check-input" id="fantasy" name="fantasy"  #fantasy="ngModel">Fantasy
+</div>
+<div class="form-check" class="genre">
+  <input [(ngModel)]="genreMap.scifi" type="checkbox" class="form-check-input" id="scifi" name="scifi"  #scifi="ngModel">SCI-FI
+</div>
+<div class="form-check" class="genre">
+  <input [(ngModel)]="genreMap.drama" type="checkbox" class="form-check-input" id="drama" name="drama"  #drama="ngModel">Drama
+</div>
+<div class="form-check" class="genre">
+  <input [(ngModel)]="genreMap.romance" type="checkbox" class="form-check-input" id="romance" name="romance"  #romance="ngModel">Romance
+  </div>
+</div>
+
+</div>
+<button type="submit" class="btn btn-success" [disabled]="!movieForm.form.valid">Submit</button>
+
+
+
+</form>
+

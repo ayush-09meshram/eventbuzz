@@ -1,0 +1,47 @@
+.example-card {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 556px;
+    width: 575px;
+    float: left;
+    margin-left: 33px;
+    margin-right: 33px;
+    margin-top: 10px;
+    align-items: center;
+}
+ 
+  .example-header-image {
+    background-color: white;
+    background-image: url('https://www.underconsideration.com/brandnew/archives/bridge_theatre_logo_vertical.png');
+    background-size: cover;
+ }
+
+ .mat-card-content>:first-child, .mat-card>:first-child {
+  margin-top: 0;
+  overflow: hidden;
+  height: 3.6em;
+  line-height: 1.2em;
+  width: 100%;
+ }
+
+ .mat-card-actions{
+   width: 100%;
+ }
+
+ .button{
+  border-radius: 4px;
+  background-color: #8a2be2;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 10px;
+  padding: 5px;
+  width: 100px;
+  margin-top: 5px;
+  position: absolute;
+  bottom: 15px;
+}
+.mat-card-actions .mat-button:first-child, .mat-card-actions .mat-raised-button:first-child {
+  margin-left: 39%;
+}

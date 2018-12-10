@@ -1,0 +1,17 @@
+
+<ul>
+  <li *ngFor="let city of cities">
+   
+      <app-city-card [parentData]=city [email]="email"></app-city-card>
+  
+  </li>
+</ul>
+<mat-card>
+    <mat-card-header>
+						Add New City    
+<input matInput #cityName type="text" placeholder="city name"></mat-card-header> 
+<mat-card-actions>
+<button mat-raised-button (click)="addCity(cityName.value)">add</button></mat-card-actions>
+</mat-card>
+
+

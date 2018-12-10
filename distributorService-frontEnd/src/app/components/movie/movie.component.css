@@ -1,0 +1,31 @@
+.example-card {
+    max-width: 400px;
+  }
+  ul
+  {
+      padding: 0;
+      list-style: none;
+  }
+  mat-card
+{
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    background-color:rgb(11, 2, 34);
+    color: white;    
+}
+mat-card-header
+{
+    margin:auto;
+    text-align: center;
+    flex-direction: column;
+}
+.mat-card-header .mat-card-title
+{
+    font-size: 2em;
+}
+.mat-card-header .mat-card-subtitle
+{
+    color: aliceblue;
+}
+  

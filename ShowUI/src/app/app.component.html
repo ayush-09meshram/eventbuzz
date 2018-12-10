@@ -1,0 +1,15 @@
+<h1>Show Service For Producer</h1>
+<div >
+<mat-button-toggle-group class="parent" name="fontStyle" aria-label="Font Style" fxLayout fxLayout="row"  fxLayoutAlign="center center">
+  <mat-button-toggle class= "child" routerLink ='/add' fxFlex="33.3">Add</mat-button-toggle>
+  <mat-button-toggle class= "child" routerLink="/update" fxFlex="33.3">Update</mat-button-toggle>
+  <mat-button-toggle class= "child" routerLink="/delete" fxFlex="33.3">Delete</mat-button-toggle>
+</mat-button-toggle-group>
+
+<!-- <mat-button-toggle class= "child" routerLink ="/add" >Add</mat-button-toggle>
+<mat-button-toggle class= "child" routerLink ="/update">Update</mat-button-toggle>
+<mat-button-toggle class= "child" routerLink ="/delete">Delete</mat-button-toggle> -->
+
+</div>
+<router-outlet></router-outlet>
+<app-alerts></app-alerts>

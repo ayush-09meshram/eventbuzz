@@ -1,0 +1,13 @@
+<h3>Enter Movie Details</h3>
+<form>
+  <input #id type="number" placeholder="Movie Id">
+  <input #title type="text"placeholder="Movie Title">
+  <input #year type="text" placeholder="Year of Release">
+  <input #poster type="text" placeholder="Poster URL">
+  <input #language type="text" placeholder="Language">
+  <input #certificate type="text" placeholder="Certificate">
+  <input #genre type="text" placeholder="Genre">
+</form>
+<div class="add-button">
+<button mat-raised-button (click)="addMovie(id.value,title.value,year.value,poster.value,language.value,certificate.value,genre.value)">Add  Movie</button>
+</div>

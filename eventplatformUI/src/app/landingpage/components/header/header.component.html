@@ -1,0 +1,45 @@
+<mat-toolbar id="navbar">
+  <div id ="navlogo">
+  <span>
+    <a >
+     <div class="tooltip">
+        <img class="navbar-brand" src="/src/assets/images/user.png" width="50" height="50" alt="logo">
+        <span class="tooltiptext">{{email}}</span>
+      </div>
+    </a>
+  </span>
+  </div>
+
+
+  
+  <span style="margin:auto;">
+ 
+        <div class="wrap">
+            <div class="search">
+               <input  #searchValue type="text" class="searchTerm" placeholder="What are you looking for?">
+               <button (click)="filter(searchValue.value)"  class="searchButton" >
+                 Search
+              </button>
+            </div>
+         </div>
+ 
+  </span>
+
+  <div class="selectcity" >
+    <mat-form-field class="matform" >
+      <div class="buttonwrapper" style="padding: 0px;">
+      <mat-select placeholder= {{cityName}}  >
+        <mat-option class ="mattext" *ngFor="let show of shows" id ="select-city" (click)="loadMovies(show.cityName)">
+          <a class="text-primary" >
+            {{show.cityName}}</a> 
+        </mat-option>
+      </mat-select>
+    </div>
+    </mat-form-field> 
+</div>
+  <!-- <span>
+      <button class="Login-button" [routerLink]="['/login']" routerLinkActive="router-link-active" >Login/Sign-Up</button>
+      <button class="Login-button" [routerLink]="['/landing']" routerLinkActive="router-link-active"  (click)="logoutClicked()">Logout</button>
+  </span> -->
+</mat-toolbar>
+ 

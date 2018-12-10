@@ -1,0 +1,17 @@
+<mat-card-actions class="button-container">
+  <div>  
+    <button class="button" mat-button routerLink="/registrationform" (click)="onClick()" ><span>Add Theatre</span></button>
+  </div>
+  <div>
+    <button class="button" mat-button routerLink="/show"><span>Add Shows</span></button>
+  </div>
+</mat-card-actions>
+
+
+<div id="card-container" *ngFor="let theatre of tempTheatre"> 
+  <app-card [some] = "theatre" *ngIf="value == 0"></app-card>
+</div>
+
+<div id="notfound-image">
+  <img  id="centered-image" *ngIf="tempTheatre.theatreId == 123 " src="/src/assets/images/not-found.png" alt="Database empty please add theatre" >
+</div>

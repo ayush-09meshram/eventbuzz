@@ -1,0 +1,140 @@
+version:  '2'
+services:
+
+  angular:
+    image: event-platform
+    build: eventplatformUI
+    ports:
+      - 4200:4200
+    expose:
+      - 4200
+    container_name: angular
+  
+  mysql:
+    image: mysql:5.7
+    ports:
+     - 3306:3306
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=register
+    volumes:
+      - /opt/datasql:/var/lib/mysql
+    network_mode: "host"
+    hostname: localhost
+    restart: always
+   
+
+  mongodb:
+    image: mongo:3.2-jessie
+    ports:
+      - "27017:27017"
+
+
+  neo4j:
+    image: neo4j:latest
+    ports:
+      - "7474:7474"
+
+#ZOOKEEPER MESSAFEBROKER
+  zookeeper:
+   image: wurstmeister/zookeeper
+   ports:
+    - "2181:2181"
+   network_mode: "host"
+   hostname: localhost
+   restart: always
+
+#KAFKA MESSAGING
+  kafka:
+   image: wurstmeister/kafka
+   ports:
+    - "9092:9092"
+   environment:
+    KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+    KAFKA_LISTENERS: PLAINTEXT://localhost:9092
+    KAFKA_ZOOKEEPER_CONNECT: localhost:2181
+   network_mode: "host"
+   hostname: localhost
+   depends_on:
+    - zookeeper  
+   restart: always
+
+  show-service:
+    
+    depends_on:
+#      - eureka
+#      - config-server
+      - mongodb
+      - kafka
+
+  distributor:
+     
+    depends_on:
+#      - eureka
+#      - config-server
+      - mongodb
+
+  user-registration:
+
+    depends_on:
+#      - eureka
+#      - config-server
+      - mongodb
+      - kafka
+
+  user-authentication:
+   
+    depends_on:
+#      - eureka
+#      - config-server
+      - mysql
+      - kafka
+
+  producer-registration:
+
+    depends_on:
+#      - eureka
+#      - config-server
+      - mongodb
+
+#  recommendation:
+
+#    depends_on:
+#      - eureka
+#      - config-server
+#      - neo4j
+#      - mongodb
+#      - kafka
+
+# scheduler:
+
+#   depends_on:
+#     - eureka
+#     - config-server
+#     - kafka
+
+#  gateway:
+
+#    depends_on:
+#      - recommendation
+#      - producer-registration
+#      - user-authentication
+#      - user-registration
+#      - distributor
+#      - show-service
+      
+
+#  movie-demo:
+#    image: movie-mongo:v1
+#    build: movie-cruiser-app/
+#    restart: always
+#    container_name: mongo-demo-compose
+#    network_mode: host
+#    depends_on:
+#      - mongodb
+#    ports:
+#      - 8090:8090
+#    expose:
+#      - 8090
+

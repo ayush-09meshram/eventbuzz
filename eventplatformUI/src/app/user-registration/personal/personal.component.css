@@ -1,0 +1,103 @@
+.example-card {
+  flex-wrap: wrap;
+}
+
+.genreinline{
+    display: inline;
+}
+.inside {
+    padding: 30px;
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    font-weight:bolder;
+    font-size: 2em;
+    text-align: center;
+    margin-left:40px;
+    
+}
+.dateOfBirth {
+    margin-left: 20px;
+    
+}
+.genderradio {
+    margin-top: 7px;
+    margin-left: 20px;
+    
+}
+.phone {
+    margin-left: 16px;
+}
+ 
+.form1 {
+    text-align: center;
+    align-self: center;
+} 
+h1{
+   text-align: center;
+}
+mat-card:hover{
+    color: darkgray;
+}
+button{
+    text-align: center;
+}
+ 
+ 
+.step2form{
+    
+    text-align: center;
+   
+    
+}
+ 
+
+mat-radio-button{
+    margin: 5px 16px;
+    margin-right: 70px; 
+}
+mat-select{
+    margin: 5px 16px;   
+}
+
+ label{
+    margin: 10px 10px;   
+} 
+ .inside img{
+     width: 100%;
+     height: 100%;
+ } 
+ .laststep{
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+   
+    
+ } 
+ li {
+     text-decoration: none;
+     display: inline;
+     margin: 1px;
+     }
+.step3form label{
+    margin: 5px 5px;
+}
+.mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle {
+     border-left: none; 
+}
+.ng-star-inserted{
+    text-align: center;
+}
+
+@media screen and (max-width: 370px) {
+    .inside[_ngcontent-c2] {
+        padding: 5vw;
+        width: 80vw;
+        height: 100px;
+        line-height: 100px;
+        font-weight: bolder;
+        font-size: 2em;
+        text-align: center;
+        margin-left: 0;
+    }  
+}

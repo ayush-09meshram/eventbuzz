@@ -1,0 +1,9 @@
+
+<mat-form-field>
+  <mat-select placeholder="Select City">
+    <mat-option *ngFor="let show of shows">
+     <span (click)="loadMovies(show.cityName)"> {{show.cityName}}</span>
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<router-outlet></router-outlet>

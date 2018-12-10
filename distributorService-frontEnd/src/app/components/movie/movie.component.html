@@ -1,0 +1,18 @@
+<p>
+  movie works!
+</p>
+<mat-card class="example-card">
+    <mat-card-header>
+      
+      <mat-card-title>{{movie.movieTitle}}</mat-card-title>
+      <mat-card-subtitle>{{movie.yearOfRelease}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{movie.posterUrl}} onerror="this.src='http://2.bp.blogspot.com/-1Z56XqW7WLU/Uxy1Te7gsRI/AAAAAAAABns/TDROk0EaWvg/s1600/This-Image-Is-Not-Available-In-Your-Country.jpg'">
+    <mat-card-content>
+     <ul>
+       <li>{{"Language: "+movie.language}}</li>
+       <li>{{"Certificate: "+movie.certificate}}</li>
+       <li>{{"Genre: "+movie.genre}}</li>
+     </ul>
+    </mat-card-content>
+  </mat-card>

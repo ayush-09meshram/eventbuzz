@@ -1,0 +1,9 @@
+.form1{
+    /* text-align: center; */
+    margin-left: 60px;
+    margin-top:10px;
+}
+.button1:hover{
+    background: white;
+    color: purple;
+}

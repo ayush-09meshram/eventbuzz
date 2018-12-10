@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="details">
+    <p>{{theatreName}} - {{theatreAddress}}</p>
+  </div>
+  <div class="shows" *ngFor="let timing of timings">
+    <app-theatre-shows [showDetails]="timing"></app-theatre-shows>
+  </div>
+</div>

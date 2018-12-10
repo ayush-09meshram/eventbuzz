@@ -1,0 +1,101 @@
+mat-card
+{
+    margin: auto;
+    text-align: center;
+    background-color:#673ab7;
+    color: white; 
+}
+mat-card-header
+{
+    flex-direction: column;
+    text-align:center;
+    margin: auto;
+
+}
+
+.mat-card-header .mat-card-title 
+{
+    font-size: 1.5em;
+}
+mat-card-subtitle
+{
+    color: aliceblue;
+}
+
+@media screen and (max-width: 400px) {
+    mat-card img
+    {
+        height: 60vh;
+    }
+    mat-card-header
+    {
+        height: 100px;
+    }
+    mat-card-actions
+    {
+        height: 60px;
+    }
+    .mat-card-header .mat-card-title 
+    {
+    font-size: 1.3em;
+    }
+    
+}
+
+@media screen and (min-width: 401px) and (max-width: 720px) {
+    mat-card img
+    {
+        height: 45vh;
+    }
+    mat-card-header
+    {
+        height: 80px;
+    }
+    mat-card-actions
+    {
+        height: 40px;
+    }
+    .mat-card-header .mat-card-title 
+    {
+    font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1280px) {
+    mat-card img
+    {
+        height: 40vh;
+    }
+    mat-card-header
+    {
+        height: 70px;
+    }
+    mat-card-actions
+    {
+        height: 60px;
+    }
+    .mat-card-header .mat-card-title 
+    {
+    font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 1281px)  {
+    mat-card img
+    {
+        height: 50vh;
+    }
+    mat-card-header
+    {
+        height: 70px;
+    }
+    mat-card-actions
+    {
+        height: 60px;
+    }
+    .mat-card-header .mat-card-title 
+    {
+    font-size: 1.3em;
+    }
+}
+

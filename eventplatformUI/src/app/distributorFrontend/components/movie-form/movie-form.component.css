@@ -1,0 +1,59 @@
+
+#movieForm
+{
+    margin: auto;
+      max-width: 500px;
+}
+  #primary
+  {
+      display: flex;
+      flex-direction: column;
+  }
+  #primary>.form-group>.form-control
+  {
+    flex-basis: 80%;
+    border: 1px solid #673ab7;
+    padding: 2%;
+    margin: 2%;  
+  }
+  #seconadry
+  {
+      margin: auto;
+      text-align: center;
+  }
+#certificateBox
+{
+    margin-left: 10%;
+}
+  #genreBox
+  {
+      margin-left: 10%;
+  }
+ h5
+ {
+     color: purple;
+ }
+
+
+
+  button{
+      background-color: black;
+      color: aliceblue;
+     width: 100%;
+     
+  }
+#genreBox
+{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.genre
+{
+    flex-basis: 45%;
+    
+}
+ 
+  h3{
+      text-align: center;
+  }

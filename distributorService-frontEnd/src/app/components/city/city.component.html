@@ -1,0 +1,11 @@
+<p>
+  city works!
+</p>
+<ul>
+  <li *ngFor="let movie of movies">
+    <app-movie-card [movie]=movie [email]="email" [cityName]="cityName"></app-movie-card>
+  </li>
+</ul>
+<mat-card>
+<button mat-raised-button (click)="addMovie()">Add new Movie</button>
+</mat-card>
